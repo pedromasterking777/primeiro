@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>IMC</title>
+	<link rel="stylesheet" href="css/main.css/">
+</head>
+
+<body>
+	<div id="wrapper">
+	  <header>aqui será o header</header>
+	<main>
+		 <h2>IMC</h2>
+			<p>
+			O <b>IMC</b> é determinado pela divisão da massa do indivíduo pelo quadrado de sua altura, em que a massa está em quilogramas e a altura em metros.
+			</p>
+		<div id="calculadora">
+			<input type="text" id="nome" placeholder="Nome">
+		    <select name="sexo" id="sexo">
+				<option value="mulher">Mulher</option>
+				<option value="mulher">Homem</option>
+			</select>
+			<input id="altura" type="number" placeholder="Altura">
+			<input id="peso" type="number" placeholder="Peso">
+			<button onClick="calculoIMC()">CALCULAR</button>
+				<div id="display"></div>
+		</div>
+		</main>
+	</div>
+	<script type="text/javascript">
+	    function calculoIMC(){
+			
+			var nome = document.getElementById('nome').value;
+			var sexo =document.getElementById('sexo').value;
+			var peso = document.getElementById('peso').value;
+			var altura = document.getElementById('altura').value;
+			var imc = (peso / (altura * altura)) * 10000;
+			
+			if (imc < 16) {
+				
+				
+			} else if (imc > 16 && imc < 17) {
+				
+			} else if (imc > 17 && imc < 18.5) {
+				
+			} else if (imc > 18.5 && imc < 25) {
+				
+			} else if (imc > 25 && imc < 30) {
+				
+			} else if (imc > 30 && imc < 35) {
+		
+			} else if (imc > 35 && imc < 40) {
+				
+			}
+			console.log('O peso é ' + peso + ' e a altura é ' + altura + ' e o IMC é ' + imc);
+			
+			document.getElementById('display').innerHTML = imc;
+		}
+	</script>
+</body>
+</html>
